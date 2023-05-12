@@ -1,42 +1,118 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+	/*background: #25252a;*/
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-container {
+	/* min-height: 100vh; */
+
+	min-height: calc(100vh - 60px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #f8f8f8;
+	padding: 1rem;
 }
 
-.card {
-  padding: 2em;
+.header-title {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	text-align: center;
 }
 
-.read-the-docs {
-  color: #888;
+.header-nav {
+	display: flex;
+	justify-content: center;
+}
+
+.header-nav a {
+	display: block;
+	padding: 0.5rem;
+	margin: 0 1rem;
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+	border-radius: 5px;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.header-nav a:hover {
+	background-color: #333;
+	color: #f8f8f8;
+}
+
+@media (min-width: 768px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 2rem;
+	}
+
+	.header-title {
+		margin-bottom: 0;
+		text-align: left;
+	}
+
+	.header-nav {
+		justify-content: flex-end;
+	}
+
+	.header-nav a {
+		margin: 0 0.5rem;
+	}
+}
+
+.footer {
+	background-color: #333;
+	padding: 1rem;
+	color: #f8f8f8;
+	text-align: center;
+	height: 60px;
+}
+
+.footer-text {
+	font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+	.footer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.footer-text {
+		font-size: 1rem;
+		margin-right: 1rem;
+	}
+}
+
+/* css for main page */
+.container {
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	padding-left: 2.5vw;
+	padding-right: 2.5vw;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.main-title {
+	font-size: 20vh;
+	border: 1.5px solid;
+	border-radius: 10px;
+	text-align: center;
 }
